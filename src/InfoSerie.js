@@ -12,10 +12,8 @@ const InfoSerie = ({ match }) => {
   const [mode, setMode] = useState('INFO');
   const [genres, setGenres] = useState([]);
   const [genreId, setGenreId] = useState('');
-
-
-
   const [data, setData] = useState({});
+
   useEffect(() => {
     axios.get('/api/series/' + match.params.id)
       .then(res => {
